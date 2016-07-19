@@ -1,4 +1,12 @@
 <p>
-  <h1>Welcome to PokeApp  0.0.0.0.0.0.1</h1>
-  {{ vm.message }}
+  <h1>Welcome to Bluit</h1>
+  <!-- I went to a stack exchange page to find the difference between jerry and jury rigged.
+   Turns out they're about the same -->
+  <form  ng-submit = "vm.submit()">
+      <input type="text"placeholder="Title" ng-model ="vm.title">
+      <input type="text" placeholder="Link URL" ng-model = "vm.link">
+      <textarea rows="8" cols="40" placeholder="Comment" ng-model = "vm.body"></textarea>
+      <input type="submit" name="submit" value="Submit Link">
+  </form>
+    {{ vm.message }}
 </p>
