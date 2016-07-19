@@ -1,13 +1,9 @@
-{
-  angular.module('pokemon').factory('Pokemon', Pokemon);
-  Pokemon.$inject = ['$scope'];
-  function Pokemon ($scope){
-    var service = {
-      working: working,
-    };
-    return service;
+(function(){
+  angular.module('pokemon.service').factory('Poke', Poke);
+  Poke.$inject = ['$resource', 'API'];
+  function Poke ($resource, API){
+
+    return $resource(API);
   }
-  function working(){
-    return 'working';
-  }
-}
+
+})();
