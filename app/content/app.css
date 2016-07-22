@@ -1,0 +1,39 @@
+li{
+    list-style: none;
+}
+h3 {
+  padding-top: 0;
+  padding-left: 50px;
+  }
+  h1 {
+    padding-left: 10px;
+  }
+input {
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+input#submit{
+padding-top: 10px;
+}
+div#titleBox {
+  padding-top: 10px;
+}
+div#linkBox {
+  padding-top:10px;
+}
+div#submitBox {
+  padding-top:35px;
+}
+label {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+label.body{
+  padding-left: 50px;
+}
+textarea {
+  padding-left: 50px;
+  padding-right: 50px;
+
+}

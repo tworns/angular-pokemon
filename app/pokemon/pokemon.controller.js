@@ -3,18 +3,19 @@
 
   angular.module('pokemon.service')
     .controller('PokemonController', PokemonController);
-    PokemonController.$inject = ['$scope', 'Poke'];
-  function PokemonController($scope, Poke) {
+    PokemonController.$inject = ['$scope', 'Poke', 'API'];
+  function PokemonController($scope, Poke, API) {
     var vm = this;
+    vm.bluitBase = API + "/posts/";
     vm.link = '';
     vm.title = '';
     vm.body = '';
-    vm.message = "MESSAGE";
     vm.submit = submit;
-    vm.allPokemon = Poke.query();
+    vm.allPosts = Poke.query();
+    vm.message = vm.allPosts;
   //  vm.post = Poke.get();
 
-    console.log(vm.allPokemon);
+    console.log(vm.allPosts);
   // for(var i = 0; i < vm.allPokemon.length; i++){
   //   console.log(vm.allPokemon[i]);
   // }

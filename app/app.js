@@ -7,11 +7,11 @@
 
   config.$inject= ['$stateProvider', '$urlRouterProvider'];
   function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/pokemon');
+    $urlRouterProvider.otherwise('/bluit-remote');
 
     $stateProvider
       .state('notes', {
-        url: '/pokemon',
+        url: '/bluit-remote',
         templateUrl: 'pokemon/pokemon.html',
         controller: 'PokemonController',
         controllerAs: 'vm',

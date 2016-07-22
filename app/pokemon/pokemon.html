@@ -1,23 +1,41 @@
 <p>
-  <h1>Welcome to Bluit</h1>
+  <h1 class = "well">Welcome to Bluit Remote</h1>
   <!-- I went to a stack exchange page to find the difference between jerry and jury rigged.
    Turns out they're about the same -->
-  <form  ng-submit = "vm.submit()">
+  <form  ng-submit = "vm.submit()" class= "form-group">
     <div class="row">
       <div class="col-xs-12">
-        <input type="text"placeholder="Title" ng-model ="vm.title">
-      </div>
-      <div class="col-xs-12">
-        <input type="text" placeholder="Link URL" ng-model = "vm.link">
-      </div>
-      <div class="col-xs-12">
-          <textarea rows="8" cols="40" placeholder="Comment" ng-model = "vm.body"></textarea>
-      </div>
-      <div class="col-xs-12">
-        <input type="submit" name="submit" value="Submit Link">
+        <h3 class = "well well-sm">New Post</h3>
       </div>
 
+
+      <div class="col-xs-6" id = "titleBox">
+        <label for="title">Post Title</label>
+        <input id = "title" class = "form-control"type="text" ng-model ="vm.title">
+      </div>
+
+      <div class="col-xs-6" id = "linkBox">
+          <label for="link">Your Link</label>
+        <input id = "link" type="text" class = "form-control" placeholder="http://test.example.try" ng-model = "vm.link">
+      </div>
+
+      <div class="col-xs-7">
+          <label class = "body"for="body">Describe your link</label>
+          <textarea  id = "body" class = "form-control" rows="8" cols="40" placeholder="Comment" ng-model = "vm.body"></textarea>
+      </div>
+
+      <div class="col-xs-5"id = "submitBox">
+        <input class = "form-control" type="submit" name="submit" value="Submit Link">
+      </div>
       </div>
   </form>
-    {{ vm.message }}
+  <h3>Around Bluit</h3>
+  <div>
+    <ul>
+      <li ng-repeat= "post in vm.message">
+        <a href="{{post.link_url}}">{{post.title}}</a> <a href="{{vm.bluitBase}}{{post.id}}">View on Bluit</a>
+      </li>
+    </ul>
+  </div>
+    <!-- Message viewer test{{ vm.message }} -->
 </p>
